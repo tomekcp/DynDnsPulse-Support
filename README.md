@@ -11,7 +11,7 @@ If you encounter any issues, have feature requests, or need assistance, please r
 ---
 
 ## Privacy Policy
-**Last Updated: March 2026**
+**Last Updated: April 2026**
 
 **1. No Data Collection**
 DynDnsPulse is designed with privacy in mind. We do not collect, store, or share any personal user data. There are no analytics, trackers, or third-party SDKs (other than the standard Cloudflare API) included in the app.
