@@ -6,7 +6,7 @@ Welcome to the official support page for **DynDnsPulse**, your reliable Dynamic 
 If you encounter any issues, have feature requests, or need assistance, please reach out to us:
 
 * **GitHub Issues:** [Open an issue here](https://github.com/tomekcp/DynDnsPulse-Support/issues)
-* **Email:** [DEINE-EMAIL@DOMAIN.COM]
+* **Email:** [info@pallus.io]
 
 ---
 
