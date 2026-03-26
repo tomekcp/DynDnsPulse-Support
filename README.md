@@ -27,4 +27,4 @@ To provide its service, the app connects to:
 Please refer to the privacy policies of these providers for information on how they handle standard connection logs.
 
 ---
-© 2026 Thomas Pallus
+© 2026 tomekcp
