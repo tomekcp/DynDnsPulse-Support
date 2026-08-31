@@ -2,11 +2,14 @@
 
 Welcome to the official support page for **DynDnsPulse**, your reliable Dynamic DNS client for macOS.
 
+**Website:** [dyndnspulse.app](https://dyndnspulse.app)
+
 ## Support
 If you encounter any issues, have feature requests, or need assistance, please reach out to us:
 
 * **GitHub Issues:** [Open an issue here](https://github.com/tomekcp/DynDnsPulse-Support/issues)
 * **Email:** [info@pallus.io]
+* **Website:** [dyndnspulse.app](https://dyndnspulse.app)
 
 ---
 
