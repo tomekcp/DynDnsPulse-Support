@@ -1,0 +1,49 @@
+# Every new report gets an immediate, visible receipt.
+#
+# Both customer reports this repo ever received waited more than a month for a
+# first reply (#1: 45 days, #2: 33 days), and neither got a label, so nothing in
+# the repo said "unanswered". This workflow cannot answer for us, but it makes
+# sure nobody is left in silence and that an unread report is marked as such.
+#
+# The promise below is 5 days. Keep it achievable — a missed promise is worse
+# than a modest one.
+name: Acknowledge new issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  acknowledge:
+    runs-on: ubuntu-latest
+    # The owner's own notes need no receipt.
+    if: github.event.issue.author_association != 'OWNER'
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+
+            await github.rest.issues.addLabels({
+              owner, repo, issue_number, labels: ['needs-triage'],
+            });
+
+            await github.rest.issues.createComment({
+              owner, repo, issue_number,
+              body: [
+                "Thanks for taking the time to report this — it has reached us.",
+                "",
+                "Every report is read, and you will get a reply here **within 5 days**.",
+                "",
+                "If you haven't already, these details help a lot:",
+                "- platform (macOS or iOS) and app version",
+                "- which DNS provider you use",
+                "- the relevant lines from the activity log (entries can be copied in the app)",
+                "",
+                "Please don't post API tokens or passwords here — this page is public.",
+              ].join("\n"),
+            });
